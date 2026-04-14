@@ -31,7 +31,7 @@
   --gap-desktop: 2.5rem;
 
   --padding-mobile: 2rem;
-  --padding-desktop: 4rem;
+  --padding-desktop: 8rem;
 }
 
 /*All Pages*/
@@ -59,11 +59,14 @@ header {
   justify-content: space-between;
   align-items: center;
   font-family: var(--font-secondary);
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
   max-height: 60px;
   overflow: hidden;
+  transition: max-height 0.3s ease;
+  width: 100%;
+  background-color: var(--color-background);
 }
 
 header a{
@@ -121,19 +124,15 @@ header a{
 /* styles for tablet */
 @media (min-width: 767px) {
   header{ 
-    margin: 0px var(--padding-mobile);
-    margin-top: 20px;
-    border-radius: 100px;
-  }
-
-  .header {
-    padding: 12px 0px;
+    width: 100%;
+    max-height: 70px;
   }
 
   .header-links {
     display: flex;
     gap: var(--gap-mobile);
     margin-right: var(--padding-mobile);
+    padding-bottom: 5px;
   }
 
   .header-menu {
@@ -151,12 +150,14 @@ header a{
 
 /* styles for desktop */
 @media (min-width: 1024px) {
-  header{
-    margin: 0px var(--padding-desktop);
-    margin-top: 20px;
-    border-radius: 100px;
-  }
   header a{
     font-size: var(--text-size-desktop);
+  }
+  .header-links {
+    gap: var(--gap-desktop);
+    margin-right: var(--padding-desktop);
+  }
+  .logo-header {
+    margin-left: var(--padding-desktop);
   }
 }
