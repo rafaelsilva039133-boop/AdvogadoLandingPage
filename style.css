@@ -41,17 +41,6 @@ body {
   color: var(--color-primary);
 }
 
-main {
-  padding: 0px var(--padding-mobile);
-}
-
-/* styles for desktop */
-@media (min-width: 1024px) {
-  main{
-    padding: 0px var(--padding-desktop);
-  }
-}
-
 /*Header*/
 header {
   display: flex;
@@ -219,4 +208,68 @@ header a{
     right: var(--padding-desktop);
     bottom: 60px;
   }
+}
+
+/*Hero Section*/
+
+#Home {
+  background-image: url("assets/Hero-bg.webp");
+  background-repeat: no-repeat;
+  background-position: 19% 0%;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+
+  display: flex;
+  padding-left: var(--padding-mobile);
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+
+}
+
+#Home h1 {
+  font-family: var(--font-primary);
+  color: var(--color-secondary);
+  font-size: 44px;
+}
+#Home h2 {
+  font-family: var(--font-secondary);
+  color: var(--color-background);
+  font-weight: 400;
+  font-size: 28px;
+}
+#Home p {
+  font-family: var(--font-text);
+  color: var(--color-background);
+  font-size: var(--text-size-mobile);
+
+}
+
+@media (min-width: 1024px){
+  #Home{
+    padding-left: 0px;
+    background-position: 10% 10%;
+    align-items: center;
+    
+  }
+  #Home h1 {
+    font-size: 88px;
+  }
+  #Home h2 {
+    font-size: 56px;
+  }
+  #Home p {
+    font-size: var(--text-size-desktop);
+  }
+}
+
+/*Accordion Section*/
+
+.accordion {
+  height: 100vh;
+}
+
+.questions {
+  padding-top: var(--gap-mobile);
 }
