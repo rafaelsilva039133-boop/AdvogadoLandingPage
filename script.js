@@ -30,7 +30,7 @@ function toggleQuestion(num) {
 
   div.style.height = "auto";
   div.style.padding = "5px";
-
+  trocarImagem(num + 1, "-");
   isOpen[0] = num;
   isOpen[1] = true;
 }
@@ -39,6 +39,10 @@ function close() {
   const div = respostas.item(isOpen[0]);
   div.style.height = "0px";
   div.style.padding = "0px";
-
+  trocarImagem(isOpen[0] + 1, "+");
   isOpen[1] = false;
+}
+
+function trocarImagem(num, param) {
+  document.getElementById(`q${num}img`).src = `assets/button ${param}.svg`;
 }
