@@ -301,10 +301,11 @@ header a{
   height: 20px;
 }
 
-.question .response {
+.response {
   background-color: var(--color-primary);
   color: var(--color-background);
   height: 0px;/*auto*/
-  padding: 0px;/*5px*/
   overflow: hidden;
+  padding: 0px;/*5px*/
+  transition: height 0.3s ease, padding 0.3s ease;
 }
