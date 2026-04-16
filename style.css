@@ -30,7 +30,7 @@
   --gap-mobile: 1.5rem;
   --gap-desktop: 2.5rem;
 
-  --padding-mobile: 2rem;
+  --padding-mobile: 1rem;
   --padding-desktop: 8rem;
 }
 
@@ -221,7 +221,7 @@ header a{
   overflow-x: hidden;
 
   display: flex;
-  padding-left: var(--padding-mobile);
+  padding: 0px var(--padding-mobile);
   justify-content: center;
   flex-direction: column;
   height: 100vh;
@@ -248,7 +248,7 @@ header a{
 
 @media (min-width: 1024px){
   #Home{
-    padding-left: 0px;
+    padding: 0px;
     background-position: 10% 10%;
     align-items: center;
     
@@ -271,5 +271,40 @@ header a{
 }
 
 .questions {
+  padding: 0px var(--padding-mobile);
   padding-top: var(--gap-mobile);
+}
+
+.question .content {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+
+  font-size: 18px;
+  font-family: var(--font-secondary);
+  border-bottom: 2px solid var(--color-primary) ;
+  padding: 8px 0px;
+}
+
+.question span{
+  color: var(--color-secondary);
+}
+
+.question button {
+  all: unset;
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+}
+
+.question button img {
+  height: 20px;
+}
+
+.question .response {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  height: 0px;/*auto*/
+  padding: 0px;/*5px*/
+  overflow: hidden;
 }
