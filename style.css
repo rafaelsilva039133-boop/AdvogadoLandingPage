@@ -483,7 +483,7 @@ header a{
 }
 
 .stat-card {
-  background: #f8f8f8;
+  background: var(--color-primary);
   border-radius: 10px;
   padding: 1.5rem;
   text-align: center;
@@ -499,7 +499,7 @@ header a{
 }
 
 .stat-card span {
-  color: var(--color-primary);
+  color: var(--color-background);
   font-weight: 600;
 }
 
